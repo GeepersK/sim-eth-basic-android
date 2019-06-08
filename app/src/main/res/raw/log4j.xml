@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="debug">
+    <Appenders>
+        <Logcat name="Logcat">
+            <ThresholdFilter
+                level="ALL"
+                onMatch="ACCEPT"
+                onMismatch="DENY" />
+            <PatternLayout pattern="%m" />
+        </Logcat>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.simsilica.sim" level="TRACE"/>
+        <Root level="DEBUG">
+            <AppenderRef ref="Logcat" />
+        </Root>
+    </Loggers>
+</Configuration>
